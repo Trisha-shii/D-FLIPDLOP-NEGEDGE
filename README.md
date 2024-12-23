@@ -1,4 +1,4 @@
-# D-FLIPDLOP-NEGEDGE
+# D-FLIPFLOP-NEGEDGE #
 
 **AIM:**
 
@@ -8,8 +8,18 @@ To implement  D flipflop using verilog and validating their functionality using 
 
 Quartus prime
 
-**THEORY**
+**Procedure** 
 
+1.	Type the program in Quartus software.
+
+2.	Compile and run the program.
+
+3.	Generate the RTL schematic and save the logic diagram.
+
+4.	Create nodes for inputs and outputs to generate the timing diagram.
+
+5.	For different input combinations generate the timing diagram.
+ 
 **D Flip-Flop**
 
 D flip-flop operates with only positive clock transitions or negative clock transitions. Whereas, D latch operates with enable signal. That means, the output of D flip-flop is insensitive to the changes in the input, D except for active transition of the clock signal. The circuit diagram of D flip-flop is shown in the following figure.
@@ -26,19 +36,39 @@ Therefore, D flip-flop always Hold the information, which is available on data i
 
 Next state of D flip-flop is always equal to data input, D for every positive transition of the clock signal. Hence, D flip-flops can be used in registers, shift registers and some of the counters.
 
-**Procedure**
 
-/* write all the steps invloved */
 
 **PROGRAM**
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
+/* Program for flipflops and verify its truth table in quartus using Verilog programming. 
+Developed by: TRISHA PRIYADARSHNI PARIDA
+RegisterNumber:
 */
 
-**RTL LOGIC FOR FLIPFLOPS**
+```module d_ff_neg_edge (d, clk, rst, q);
+  input d, clk, rst;
+  output reg q;
+
+  always @(negedge clk or posedge rst) begin
+    if (rst)
+      q <= 0; // Reset the flip-flop
+    else
+      q <= d; // D input is passed to Q on the negative clock edge
+  end
+endmodule
+```
+
+**RTL LOGIC FOR FLIPFLOP**
+
+<img width="503" alt="exp 8 rtl" src="https://github.com/user-attachments/assets/fdc2aba7-4142-4b75-a383-fa147a146a92" />
 
 
-**TIMING DIGRAMS FOR FLIP FLOPS**
+**TIMING DIAGRAM FOR FLIP FLOP**
+
+<img width="959" alt="exp 8 wf" src="https://github.com/user-attachments/assets/bb036ef8-9094-4081-83e8-74cd21f3edc2" />
 
 
-**RESULTS**
+**RESULT**
+
+D flipflop using verilog and validating their functionality using their functional tables implemented.
+
