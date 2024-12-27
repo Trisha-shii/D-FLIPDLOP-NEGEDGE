@@ -45,7 +45,8 @@ Developed by: TRISHA PRIYADARSHNI PARIDA
 RegisterNumber: 212224230293
 */
 
-```module d_ff_neg_edge (d, clk, rst, q);
+```
+module d_ff_neg_edge (d, clk, rst, q);
   input d, clk, rst;
   output reg q;
 
