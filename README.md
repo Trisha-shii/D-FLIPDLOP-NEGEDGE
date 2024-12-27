@@ -2,11 +2,11 @@
 
 **AIM:**
 
-To implement  D flipflop using verilog and validating their functionality using their functional tables
+To implement  D flipflop using verilog and validating their functionality using their functional tables.
 
 **SOFTWARE REQUIRED:**
 
-Quartus prime
+Quartus prime.
 
  
 **D Flip-Flop:**
